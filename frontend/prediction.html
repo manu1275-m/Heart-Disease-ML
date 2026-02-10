@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Prediction with X-AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header-nav">
+    <a href="index.html" class="nav-link">← Back to Home</a>
+</div>
+
+<div class="container">
+    <h2>Heart Disease Prediction </h2>
+
+    <div class="grid">
+
+        <div class="field">
+            <label>Age</label>
+            <input id="age" type="number" placeholder="Age">
+        </div>
+
+        <div class="field">
+            <label>Sex</label>
+            <select id="sex">
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Chest Pain Type (0-3)</label>
+            <input id="cp" type="number" min="0" max="3" placeholder="0 - 3">
+        </div>
+
+        <div class="field">
+            <label>Resting BP (94-200)</label>
+            <input id="trestbps" type="number" min="94" max="200" placeholder="94 - 200">
+        </div>
+
+        <div class="field">
+            <label>Cholesterol (chol)</label>
+            <input id="chol" type="number" placeholder="Cholesterol">
+        </div>
+
+        <div class="field">
+            <label>Fasting Blood Sugar (fbs)</label>
+            <select id="fbs">
+                <option value="0">FBS ≤ 120</option>
+                <option value="1">FBS > 120</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Resting ECG (0-2)</label>
+            <input id="restecg" type="number" min="0" max="2" placeholder="0 - 2">
+        </div>
+
+        <div class="field">
+            <label>Max Heart Rate (71-202)</label>
+            <input id="thalach" type="number" min="71" max="202" placeholder="71 - 202">
+        </div>
+
+        <div class="field">
+            <label>Exercise-Induced Angina (exang)</label>
+            <select id="exang">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Oldpeak</label>
+            <input id="oldpeak" type="number" step="0.1" min="0.1" max="6" placeholder="0.1 - 6.0">
+        </div>
+
+        <div class="field">
+            <label>Slope (0-3)</label>
+            <input id="slope" type="number" min="0" max="3" placeholder="0 - 3">
+        </div>
+
+        <div class="field">
+            <label>CA (0–4)</label>
+            <input id="ca" type="number" min="0" max="4" placeholder="CA (0-4)">
+        </div>
+
+        <div class="field">
+            <label>Thal</label>
+            <select id="thal">
+                <option value="1">Normal</option>
+                <option value="2">Fixed Defect</option>
+                <option value="3">Reversible Defect</option>
+            </select>
+        </div>
+
+    </div>
+
+    <button onclick="predict()">Predict</button>
+
+    <div id="result"></div>
+    <canvas id="shapChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d0d0d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+.header-nav {
+    max-width: 1000px;
+    margin: 0 auto 20px;
+}
+
+.nav-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #764ba2;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 35px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px 40px;
+    margin-bottom: 35px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #e63946;
+    background: #222;
+    box-shadow: 0 0 8px rgba(230, 57, 70, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #e63946, #c71d28);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.25s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #c71d28, #a50f1a);
+    transform: translateY(-2px);
+}
+
+#result {
+    margin-top: 25px;
+    padding: 22px;
+    border-radius: 10px;
+    background: rgba(230, 57, 70, 0.1);
+    border-left: 4px solid #e63946;
+    font-size: 17px;
+}
+
+canvas {
+    margin-top: 25px;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    display: none; /* Hidden by default, shown when SHAP data available */
+    width: 100% !important;
+    max-height: 400px;
+}
